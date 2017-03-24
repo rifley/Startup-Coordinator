@@ -1,0 +1,15 @@
+#if($teamMembers.size()>0)
+  #foreach($member in $teamMembers)
+    <p>$member.getName() exists</p>
+  #end
+  <p><a href="/teams/$team.getId()/members/new">Add another member</a>
+  <p><a href="/teams/$team.getId()">Team Homepage</a>
+  <p><a href="/teams">View All Teams</a></p>
+  <p><a href="/">Go Home</a></p>
+#else
+  <p>No members yet!</p>
+  <p><a href="/teams/$team.getId()/members/new">Add a member</a>
+  <p><a href="/teams/$team.getId()/members">View current Team</a>
+  <p><a href="/teams">View All Teams</a></p>
+  <p><a href="/">Go Home</a></p>
+#end

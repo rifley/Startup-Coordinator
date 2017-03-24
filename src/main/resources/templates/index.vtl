@@ -4,5 +4,14 @@
   <h5>It's that time of year folks. Once a year, 6 times a year, we bring together the best minds in our industry to showcase the most interesting stuff this industry has to offer. <a href="/details">Check out</a> whats going on this weekend!</h5>
 </div>
 <div class="teams">
-  <h1><a href="/teams">Teams</a> attending</h1>
+  <h1>Current teams:
+    #if($teams.size()>0)
+      #foreach($team in $teams)
+        <p><a href="/teams/$team.getId()">$team.getName()</a></p>
+      #end
+      <p><a href="/teams/new">Add another team</a></p>
+    #else
+      <p>No Teams currently attending<p>
+      <p><a href="/teams/new">Add a team</a></p>
+    #end
 <!--index.vtl-->
