@@ -1,7 +1,8 @@
 #introPara {
-  width: 500px;
+  width: 600px;
   border: dotted 2px black;
-  background-color: salmon;
+  background-color: lightyellow;
+  padding: 2px;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
 }
 
 .jumbotron {
+  background-color: #81B44B;
   width: 600px;
   text-align: center;
 

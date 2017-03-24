@@ -1,10 +1,10 @@
 <div class="backdrop">
-  <h1>All Teams</h1>
+  <h1 class="jumbotron">All Teams</h1>
 
   #if($teams)
     #foreach($team in $teams)
       <div class="teamsPage">
-        <h3><a href="/teams/$team.getId()">$team.getName() Homepage</a></h3>
+        <h3><a href="/teams/$team.getId()">$team.getName() Team Page</a></h3>
       </div>
       <br>
     #end
