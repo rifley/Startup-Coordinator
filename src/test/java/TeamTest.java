@@ -15,13 +15,13 @@ public class TeamTest {
     assertEquals(true, newTeam instanceof Team);
   }
   @Test
-  public void Team_instantiatesWithString_String() {
+  public void teamName_instantiatesWithString_String() {
     Team newTeam = new Team("Lightning");
     assertEquals("Lightning", newTeam.getName());
   }
 
   @Test
-  public void Team_returnsAllInstances_true() {
+  public void all_returnsAllInstances_true() {
     Team oneTeam = new Team("Lightning");
     Team twoTeam = new Team("Thunder");
     assertEquals(true, Team.all().contains(oneTeam));
@@ -29,14 +29,14 @@ public class TeamTest {
   }
 
   @Test
-  public void Team_clearsOutArrayList_true(){
+  public void listClear_clearsOutArrayList_true(){
     Team oneTeam = new Team("Lightning");
     Team.clear();
     assertEquals(0, Team.all().size());
   }
 
   @Test
-  public void Team_getsCorrectId_int() {
+  public void teamId_getsCorrectId_int() {
     Team oneTeam = new Team("Lightning");
     Team twoTeam = new Team("Thunder");
     assertEquals(2, twoTeam.getId());
