@@ -1,7 +1,11 @@
-<p>Great success!</p>
+<div class="backdrop">
+  <h4>$member.getName() successfully added to $team.getName()</h4>
 
 
-<p><a href="/teams/$team.getId()/members/new">Add another member</a>
-<p><a href="/teams/$team.getId()">Team Homepage</a>
-<p><a href="/teams">View All Teams</a></p>
-<p><a href="/">Go Home</a></p>
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="/teams/$team.getId()/members/new">Add Another Member</a></li>
+    <li role="presentation"><a href="/teams/$team.getId()">Team Homepage</a></li>
+    <li role="presentation"><a href="/teams">All Teams</a></li>
+    <li role="presentation"><a href="/">Go Home</a></li>
+  </ul>
+</div>

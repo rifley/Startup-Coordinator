@@ -1,13 +1,20 @@
-#if($teamMembers.size()>0)
-  #foreach($member in $teamMembers)
-    <p>$member.getName() exists</p>
+<div class="backdrop">
+  #if($teamMembers.size()>0)
+    <h4>Members:</h4>
+    #foreach($member in $teamMembers)
+      <h6>$member.getName()</h6>
+    #end
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="/teams/$team.getId()/members/new">Add another member</a></li>
+      <li role="presentation"><a href="/team/$team.getId()">Back to Team Homepage</a></li>
+      <li role="presentation"><a href="/">Go Home</a></li>
+    </ul>
+  #else
+    <h1>This team doesn't have any members yet!</h1>
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="/teams/$team.getId()/members/new">Add Team Member</a></li>
+      <li role="presentation"><a href="/teams/$team.getId()">Back to Team Homepage</a></li>
+      <li role="presentation"><a href="/">Go Home</a></li>
+    </ul>
   #end
-  <p><a href="/teams/$team.getId()/members/new">Add another member</a>
-  <p><a href="/teams/$team.getId()">Team Homepage</a>
-  <p><a href="/">Go Home</a></p>
-#else
-  <h1>This team doesn't have any members yet!</h1>
-  <p><a href="/teams/$team.getId()/members/new">Add a member</a>
-  <p><a href="/teams/$team.getId()">Back to Team Homepage</a>
-  <p><a href="/">Go Home</a></p>
-#end
+</div>

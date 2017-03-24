@@ -1,8 +1,13 @@
-<div class="container">
+<div class="backdrop">
+  <h1 class="jumbotron">Add a member!</h1>
+  <br>
   <form action="/teams/$team.getId()/members" method="post">
     <label for="member">Member Name: </label>
     <input type="text" name="member" id="member">
     <button type="submit" class="btn btn-sucess">Add Team Member</button>
   </form>
-  <p><a href="/">go home</a></p>
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="/teams/$team.getId()">Team Homepage</a></li>
+    <li role="presentation"><a href="/">Go Home</a></li>
+  </ul>
 </div>

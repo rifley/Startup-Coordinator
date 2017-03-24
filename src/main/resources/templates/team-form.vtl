@@ -1,8 +1,12 @@
-<form action="/teams/new" method="post">
-  <label for="team">Team Name: </label>
-  <input type="text" name="team" id="team">
-  <button type="submit" class="btn btn-sucess">Add Team</button>
-</form>
-
-<h6><a href="/teams">Go back</a></h6>
-<h6><a href="/">Go Home</a></h6>
+<div class="backdrop">
+  <h1 class="jumbotron">Let's add a team!</h1>
+  <form action="/teams/new" method="post">
+    <label for="team">Team Name: </label>
+    <input type="text" name="team" id="team">
+    <button type="submit" class="btn btn-sucess">Add Team</button>
+  </form>
+  <br>
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="/">Go Back</a></li>
+  </ul>
+</div>

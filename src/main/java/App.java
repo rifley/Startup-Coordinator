@@ -69,7 +69,7 @@ public class App {
       Member newMember = new Member(request.queryParams("member"));
       model.put("team", currentTeam);
       currentTeam.addMember(newMember);
-      model.put("members", newMember.all());
+      model.put("member", newMember);
       model.put("template", "templates/member-added.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
