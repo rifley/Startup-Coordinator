@@ -5,7 +5,7 @@
 #### By _**Riley Watts**_
 
 ## Description
-_Example text for the description of the project_
+_This app allows users to add Teams to an event and then add members specific to each team. It exercises RESTful routing, Spark and Velocity Templates_
 
 
 ## Specifications
@@ -23,6 +23,11 @@ _Example text for the description of the project_
 * _Run the command 'gradle run'_
 * _Open browser and go to localhost:4567_
 
+### Technologies Used
+
+* _Java_
+* _Spark_
+* _Velocity_
 
 ### License
 
