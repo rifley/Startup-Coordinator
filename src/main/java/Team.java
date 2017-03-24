@@ -6,7 +6,7 @@ public class Team {
   private String mTeamName;
   private static List<Team> instances = new ArrayList<Team>();
   private int mId;
-  
+
 
    public Team(String name) {
      mTeamName = name;
@@ -28,5 +28,9 @@ public class Team {
 
    public int getId() {
      return mId;
+   }
+
+   public static Team find(int id) {
+     return instances.get(id - 1);
    }
 }

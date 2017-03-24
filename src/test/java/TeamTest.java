@@ -41,4 +41,11 @@ public class TeamTest {
     Team twoTeam = new Team("Thunder");
     assertEquals(2, twoTeam.getId());
   }
+
+  @Test
+  public void find_returnsCorrectTeamObject_Team() {
+    Team oneTeam = new Team("Lightning");
+    Team twoTeam = new Team("Thunder");
+    assertEquals(twoTeam, Team.find(twoTeam.getId()));
+  }
 }

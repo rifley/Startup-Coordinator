@@ -1,0 +1,10 @@
+#if($teams)
+  #foreach($team in $teams)
+    <a href="/team/$team.getId()">$team.getName()</a>
+  #end
+  <p><a href="/team/new">Add another team!</a></p>
+#else
+  <p>No teams yet! <a href="/team/new">Add a new team!</a></p>
+#end
+
+<h6><a href="/">Go Home</a></h6>

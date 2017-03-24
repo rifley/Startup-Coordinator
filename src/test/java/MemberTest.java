@@ -41,4 +41,11 @@ public class MemberTest {
     Member twoMember = new Member("Todd");
     assertEquals(2, twoMember.getId());
   }
+
+  @Test
+  public void find_returnsCorrectMemberObject_Member() {
+    Member oneMember = new Member("Todd");
+    Member twoMember = new Member("Janet");
+    assertEquals(twoMember, Member.find(twoMember.getId()));
+  }
 }

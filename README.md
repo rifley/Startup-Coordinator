@@ -12,6 +12,8 @@ _Example text for the description of the project_
 
 | Behavior                   | Input Example     | Output Example    |
 | -------------------------- | -----------------:| -----------------:|
+|add team name| "Lightning" | Team Name: "Lightning"|
+|add member to team| "Janet" | Lightning: Members: Janet|
 
 
 
