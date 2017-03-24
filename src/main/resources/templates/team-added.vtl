@@ -1,9 +1,9 @@
-#if($teams)
-  #foreach($team in $teams)
-    $team.getName(), $team.getId()
-  #end
+#if($team)
+    <p>$team.getName() succesfully added!</p>
+
 #else
-  <p>sorry</p>
+  <p>Sorry, something terrible has happened!</p>
+  <p>Try again <a href="/teams/new">Add a team</a></p>
 #end
 
 <h6><a href="/teams">View Teams</a></h6>

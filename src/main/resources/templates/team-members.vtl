@@ -4,12 +4,10 @@
   #end
   <p><a href="/teams/$team.getId()/members/new">Add another member</a>
   <p><a href="/teams/$team.getId()">Team Homepage</a>
-  <p><a href="/teams">View All Teams</a></p>
   <p><a href="/">Go Home</a></p>
 #else
-  <p>No members yet!</p>
+  <h1>This team doesn't have any members yet!</h1>
   <p><a href="/teams/$team.getId()/members/new">Add a member</a>
-  <p><a href="/teams/$team.getId()/members">View current Team</a>
-  <p><a href="/teams">View All Teams</a></p>
+  <p><a href="/teams/$team.getId()">Back to Team Homepage</a>
   <p><a href="/">Go Home</a></p>
 #end

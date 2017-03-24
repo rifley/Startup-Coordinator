@@ -1,17 +1,20 @@
-<h1>$team.getName() Homepage<h1>
+<h1 class="jumbotron">Homepage of $team.getName() </h1>
 
-<h2>Current Members:</h2>
-#if($members.size()>0)
-  <ul>
-    #foreach($member in $members)
-      <li>$member.getName()</li>
-    #end
-  </ul>
-#else
-  <p>No members yet!</p>
-#end  
+<div class="container">
+  <h5>Current <a href="/teams/$team.getId()/members">Members</a>:</h5>
+  #if($members.size()>0)
+    <ul>
+      #foreach($member in $members)
+        <li>$member.getName()</li>
+      #end
+    </ul>
+  #else
+    <p>No members yet!</p>
+  #end
+</div>
 
-
-<p><a href="/teams/$team.getId()/members">View Members</a></p>
-
-<p><a href="/teams/$team.getId()/members/new">Add a new member</a>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="/">Go Home</a></li>
+  <li role="presentation"><a href="/teams">All Teams</a></li>
+  <li role="presentation"><a href="/teams/$team.getId()/members/new">Add Team Member</a></li>
+</ul>

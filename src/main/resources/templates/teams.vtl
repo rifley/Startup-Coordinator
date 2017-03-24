@@ -1,10 +1,18 @@
+<h1 class="jumbotron">All Teams</h1>
+
 #if($teams)
   #foreach($team in $teams)
-    <a href="/teams/$team.getId()">$team.getName()</a>
+    <div class="teamsPage">
+      <h3><a href="/teams/$team.getId()">$team.getName() Homepage</a></h3>
+    </div>
+    <br>
   #end
-  <p><a href="/teams/new">Add another team!</a></p>
+  <br>
 #else
-  <p>No teams yet! <a href="/teams/new">Add a new team!</a></p>
+  <h4>No teams yet!</h4>
 #end
 
-<h6><a href="/">Go Home</a></h6>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="/">Go Home</a></li>
+  <li role="presentation"><a href="/teams/new">Add A new Team</a></li>
+</ul>

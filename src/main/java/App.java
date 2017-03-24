@@ -39,7 +39,7 @@ public class App {
     post("/teams/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Team newTeam = new Team(request.queryParams("team"));
-      model.put("teams", newTeam.all());
+      model.put("team", newTeam);
       request.session().attribute("teamSession", newTeam.all());
       model.put("template", "templates/team-added.vtl");
       return new ModelAndView(model, layout);
